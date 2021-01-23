@@ -1,8 +1,6 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var data, idString;
-//TEST STRING: ?me=Martha--2003-09-06T19:05:00.000+02:00&you=Laura--2004-02-16T15:30:00.000+01:00--2016-09-01T10:00:00.000+02:00
-//TEST STRING 2: /Martha--2003-09-06T19:05:00.000+02:00--Laura--2004-02-16T15:30:00.000+01:00--2016-09-01T10:00:00.000+02:00
 
 if (urlParams.get('id')) {
   idString = atob(urlParams.get('id')).split('--');
