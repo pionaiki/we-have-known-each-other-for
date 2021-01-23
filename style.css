@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #D627CA;
+  background: -webkit-linear-gradient(top left, #D627CA, #D98545);
+  background: -moz-linear-gradient(top left, #D627CA, #D98545);
+  background: linear-gradient(to bottom right, #D627CA, #D98545);
+}
+p {
+  font-size: 5vh;
+  font-family: Abel, Verdana, Consolas;
+}
+.updt {
+  font-weight: bold;
+  font-family: monospace;
+  background: linear-gradient(to right, #000000ff, 90%, #00000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.center-y {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

@@ -1,0 +1,29 @@
+<meta charset='UTF-8'>
+<html>
+
+<head>
+  <title>We Have Known Each Other For...</title>
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <script src='script.js'></script>
+  <link href='style.css' rel='stylesheet'>
+</head>
+
+<body>
+  <center>
+    <div class='center-y'>
+      <p><b>Hey <span id='YourName'></span>!</b></p>
+      <p>You have known me for<br>
+        <span id='YouMe' class='updt'></span><br>
+        % of Your life.
+      </p>
+      <p>I have known You for<br>
+        <span id='MeYou' class='updt'></span><br>
+        % of mine.
+      </p>
+      <p><b>~<span id='MyName'></span></b></p>
+    </div>
+  </center>
+  <script>updateNames(); update(); setInterval(function () { update(); }, 0);</script>
+</body>
+
+</html>
