@@ -16,15 +16,27 @@ label {
   font-size: 4vh;
 }
 .mini-label {
-  font-size: 0.8vw;
+  font-size: 1.6vh;
+  color: #000000a0;
 }
 input {
+  text-align: center;
+  font-family: inherit;
   font-size: 3vh;
   padding: 6px;
-  margin: 2px 0;
+  margin: 0.05vh;
   box-sizing: border-box;
   border: none;
   background-color: #0000001f;
+}
+.small {
+  width: 10vh;
+}
+.medium {
+  width: 20vh;
+}
+.big {
+  width: 30.1vh;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #00000080;
@@ -59,10 +71,23 @@ input {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   margin: 0.5vw;
-  font-size: 1vh;
+  font-size: 1.6vh;
   color: #000000a0;
 }
 .footer a {
   font-weight: bold;
   color: inherit;
+}
+.footer button {
+  font-family: inherit;
+  font-size: 2vh;
+  margin-bottom: 2vh;
+  padding: 6px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #0000001f;
+}
+.footer button:hover {
+  background-color: #0000003f;
+  cursor: pointer;
 }

@@ -1,42 +1,52 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-var data, idString;
+var data, idString, errors = [];
 
 if (urlParams.get('id')) {
-  idString = atob(urlParams.get('id')).split('--');
+  getData();
   setData();
-  if (checkData().length) {
-    alert(`Your link contains errors:\n\n${listErrors(checkData())}\nIf you created the link, and don't know why it isn't working, feel free to message the developer:\nhttps://pionaiki.com/#contact`);
-    location = '/create.html';
-  }
+  checkData();
 } else {
   location = '/create.html';
 }
 
+function getData() {
+  try {
+    idString = atob(urlParams.get('id')).split('--');
+  } catch (err) {
+    errors[errors.length] = `Unable to parse ID String: '${err}'`;
+    alertErrors();
+  }
+}
+
 function setData() {
-  data = {
-    'me': {
-      'name': atob(idString[0]),
-      'birth': new Date(idString[1])
-    },
-    'you': {
-      'name': atob(idString[2]),
-      'birth': new Date(idString[3]),
-      'meeting': new Date(idString[4]),
-    }
-  };
+  try {
+    data = {
+      'me': {
+        'name': atob(idString[0]),
+        'birth': new Date(idString[1])
+      },
+      'you': {
+        'name': atob(idString[2]),
+        'birth': new Date(idString[3]),
+        'meeting': new Date(idString[4]),
+      }
+    };
+  } catch (err) {
+    errors[errors.length] = `Unable to set the data object: '${err}'`;
+    alertErrors();
+  }
 }
 
 function checkData() {
-  var errors = [];
   if (!data.me.name) {
-    errors[errors.length] = 'data.me.name could not be parsed / does not exist';
+    errors[errors.length] = 'data.me.name does not exist';
   }
   if (!data.me.birth.getTime()) {
     errors[errors.length] = 'data.me.birth is not a correct Date';
   }
   if (!data.you.name) {
-    errors[errors.length] = 'data.you.name could not be parsed / does not exist';
+    errors[errors.length] = 'data.you.name does not exist';
   }
   if (!data.you.birth.getTime()) {
     errors[errors.length] = 'data.you.birth is not a correct Date';
@@ -44,16 +54,23 @@ function checkData() {
   if (!data.you.meeting.getTime()) {
     errors[errors.length] = 'data.meeting.birth is not a correct Date';
   }
-  return errors;
+  alertErrors();
+}
+
+function alertErrors() {
+  if (errors.length) {
+    alert(`Your link contains errors.\nIf you created the link, and don't know why it isn't working, feel free to message the developer:\nhttps://pionaiki.com/#contact\n\nErrors:\n${listErrors(errors)}\n`);
+    location = '/create.html';
+  }
 }
 
 function listErrors(errors) {
   if (!errors.length) {
-    return 'UNKNOWN ERRORS';
+    return 'UNKNOWN ERRORS\n';
   } else {
-    var list = '';
+    var list = `[Param String]: ${urlParams.get('id')}\n`;
     for (var i = 0; i < errors.length; i++) {
-      list += `[ERROR-${i}]: ${errors[i]}\n`;
+      list += `[ERROR - ${i}]: ${errors[i]} \n`;
     }
     return list;
   }
