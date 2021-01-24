@@ -3,10 +3,35 @@
 
 <head>
   <title>Create a Link</title>
+  <script src='crscript.js'></script>
+  <link href='style.css' rel='stylesheet'>
 </head>
 
 <body>
-  In production.
+  <div class='center-y'>
+  <center>
+    <p>
+    <label>Your name:</label><br>
+    <input type='text' id='MyName' oninput='update();'></input><br>
+    <label>Your birthday:</label><br>
+    <input type='datetime-local' id='MyBirth' oninput='update();'></input>
+    </p>
+    <p>
+    <label>Your Friend's name:</label><br>
+    <input type='text' id='TheirName' oninput='update();'></input><br>
+    <label>Their birthday:</label><br>
+    <input type='datetime-local' id='TheirBirth' oninput='update();'></input>
+    </p>
+    <p>
+    <label>When did You first meet them:</label><br>
+    <input type='datetime-local' id='Meeting' oninput='update();'></input>
+    </p>
+    <p>
+      <label>Your Link:</label>
+      <input type='text' id='Link' readonly='readonly' onclick='update(); copy(this);'></input>
+    </p>
+  </center>
+  </div>
 </body>
 
 </html>
