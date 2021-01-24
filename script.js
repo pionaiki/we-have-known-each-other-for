@@ -88,12 +88,13 @@ function update() {
 
 function getPercentage(type) {
   var nominator, denominator;
+  var now = Date.now();
   if (type == 'YouMe') {
-    nominator = Math.abs(Date.now() - data.you.meeting.getTime());
-    denominator = Math.abs(Date.now() - data.you.birth.getTime());
+    nominator = Math.abs(now - data.you.meeting.getTime());
+    denominator = Math.abs(now - data.you.birth.getTime());
   } else if (type == 'MeYou') {
-    nominator = Math.abs(Date.now() - data.you.meeting.getTime());
-    denominator = Math.abs(Date.now() - data.me.birth.getTime());
+    nominator = Math.abs(now - data.you.meeting.getTime());
+    denominator = Math.abs(now - data.me.birth.getTime());
   } else {
     console.error(`getPercentage(${type}): '${type}' is an incorrect argument.`);
   }
