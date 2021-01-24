@@ -82,8 +82,8 @@ function updateNames() {
 }
 
 function update() {
-  document.getElementById('YouMe').textContent = getPercentage('YouMe').toFixed(10);
-  document.getElementById('MeYou').textContent = getPercentage('MeYou').toFixed(10);
+  document.getElementById('YouMe').textContent = getPercentage('YouMe');
+  document.getElementById('MeYou').textContent = getPercentage('MeYou');
 }
 
 function getPercentage(type) {
@@ -98,5 +98,10 @@ function getPercentage(type) {
   } else {
     console.error(`getPercentage(${type}): '${type}' is an incorrect argument.`);
   }
-  return 100 * nominator / denominator;
+  var result = 100 * nominator / denominator;
+  if (result == 100) {
+    return result;
+  } else {
+    return result.toFixed(10);
+  }
 }
