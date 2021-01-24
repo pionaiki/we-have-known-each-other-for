@@ -13,32 +13,34 @@
       <p>
         <label>Your Name & Birthday:<br>
           <input type='text' id='MyName' placeholder='Your First Name' oninput='update();'></input><br>
-          <input type='date' id='MyBirth' oninput='update();'></input>
-          <input type='time' id='MyBirthTime' oninput='update();'></input>
+          <input type='date' id='MyBirth' placeholder='Date' oninput='update();'></input>
+          <input type='time' id='MyBirthTime' placeholder='Time' oninput='update();'></input>
         </label>
       </p>
       <p>
         <label>Your Friend's<br>
           Name & Birthday:<br>
           <input type='text' id='TheirName' placeholder='Their First Name' oninput='update();'></input><br>
-          <input type='date' id='TheirBirth' oninput='update();'></input>
-          <input type='time' id='TheirBirthTime' oninput='update();'></input>
+          <input type='date' id='TheirBirth' placeholder='Date' oninput='update();'></input>
+          <input type='time' id='TheirBirthTime' placeholder='Time' oninput='update();'></input>
         </label>
       </p>
       <p>
         <label>First Meeting:<br>
-          <input type='date' id='Meeting' oninput='update();'></input>
-          <input type='time' id='MeetingTime' oninput='update();'></input>
+          <input type='date' id='Meeting' placeholder='Date' oninput='update();'></input>
+          <input type='time' id='MeetingTime' placeholder='Time' oninput='update();'></input>
         </label>
       </p>
       <p>
         <label>Click To Copy Link:<br>
-          <input type='text' id='Link' readonly='readonly' onclick='update(); copy(this);'></input>
+          <input type='text' id='Link' style='color: #00000080;' readonly='readonly'
+            onclick='update(); copy(this);'></input>
         </label><br>
         <span style='font-size: 10px; color: #000000a0;'>Check the link before sending it to them.</span>
       </p>
     </center>
   </div>
+  <script>update();</script>
 </body>
 
 </html>

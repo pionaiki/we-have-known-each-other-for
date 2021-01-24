@@ -1,12 +1,12 @@
 function getInput() {
   var input = '';
-  input += document.getElementById('MyName').value + '--';
+  input += btoa(document.getElementById('MyName').value) + '--';
   input += document.getElementById('MyBirth').value;
   if (document.getElementById('MyBirthTime').value) {
     input += 'T' + document.getElementById('MyBirthTime').value;
   }
   input += '--';
-  input += document.getElementById('TheirName').value + '--';
+  input += btoa(document.getElementById('TheirName').value.replace('-', '-')) + '--';
   input += document.getElementById('TheirBirth').value;
   if (document.getElementById('TheirBirthTime').value) {
     input += 'T' + document.getElementById('TheirBirthTime').value;

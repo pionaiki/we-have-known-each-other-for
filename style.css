@@ -13,17 +13,27 @@ p {
   font-size: 5vh;
 }
 label {
-  font-size: 2vh;
+  font-size: 4vh;
 }
 .mini-label {
   font-size: 0.8vw;
 }
 input {
+  font-size: 3vh;
   padding: 6px;
   margin: 2px 0;
   box-sizing: border-box;
   border: none;
   background-color: #0000001f;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #00000080;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #00000080;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #00000080;
 }
 .updt {
   font-weight: bold;
