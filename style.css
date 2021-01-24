@@ -52,3 +52,17 @@ input {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.footer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0.5vw;
+  font-size: 1vh;
+  color: #000000a0;
+}
+.footer a {
+  font-weight: bold;
+  color: inherit;
+}
