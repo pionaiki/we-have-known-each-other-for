@@ -2,7 +2,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var data, idString, errors = [];
 
-if (urlParams.get('id')) {
+if (urlParams.get('link') == 'true') {
   getData();
   setData();
   checkData();

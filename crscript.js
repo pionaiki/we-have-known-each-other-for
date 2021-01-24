@@ -20,7 +20,7 @@ function getInput() {
 }
 
 function getLink(string) {
-  return 'https://whkeof.pionaiki.com/' + btoa(string);
+  return `https://whkeof.pionaiki.com/${btoa(string)}?link=true`;
 }
 
 function update() {
