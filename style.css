@@ -67,7 +67,7 @@ input {
 }
 .footer {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 8px);
   bottom: 0;
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
