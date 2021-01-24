@@ -7,10 +7,10 @@ if (urlParams.get('id')) {
   setData();
   if (checkData().length) {
     alert(`Your link contains errors:\n\n${listErrors(checkData())}\nIf you created the link, and don't know why it isn't working, feel free to message the developer:\nhttps://pionaiki.com/#contact`);
-    //location = '/create.html';
+    location = '/create';
   }
 } else {
-  location = '/create.html';
+  location = '/create';
 }
 
 function setData() {
