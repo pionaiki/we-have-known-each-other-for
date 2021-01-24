@@ -7,10 +7,23 @@ body {
   background: -webkit-linear-gradient(top left, #D627CA, #D98545);
   background: -moz-linear-gradient(top left, #D627CA, #D98545);
   background: linear-gradient(to bottom right, #D627CA, #D98545);
+  font-family: Abel, Verdana, Consolas;
 }
 p {
   font-size: 5vh;
-  font-family: Abel, Verdana, Consolas;
+}
+label {
+  font-size: 2vh;
+}
+.mini-label {
+  font-size: 0.8vw;
+}
+input {
+  padding: 6px;
+  margin: 2px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #0000001f;
 }
 .updt {
   font-weight: bold;

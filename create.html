@@ -9,28 +9,35 @@
 
 <body>
   <div class='center-y'>
-  <center>
-    <p>
-    <label>Your name:</label><br>
-    <input type='text' id='MyName' oninput='update();'></input><br>
-    <label>Your birthday:</label><br>
-    <input type='datetime-local' id='MyBirth' oninput='update();'></input>
-    </p>
-    <p>
-    <label>Your Friend's name:</label><br>
-    <input type='text' id='TheirName' oninput='update();'></input><br>
-    <label>Their birthday:</label><br>
-    <input type='datetime-local' id='TheirBirth' oninput='update();'></input>
-    </p>
-    <p>
-    <label>When did You first meet them:</label><br>
-    <input type='datetime-local' id='Meeting' oninput='update();'></input>
-    </p>
-    <p>
-      <label>Your Link:</label><br>
-      <input type='text' id='Link' readonly='readonly' onclick='update(); copy(this);'></input>
-    </p>
-  </center>
+    <center>
+      <p>
+        <label>Your Name & Birthday:<br>
+          <input type='text' id='MyName' placeholder='Your First Name' oninput='update();'></input><br>
+          <input type='date' id='MyBirth' oninput='update();'></input>
+          <input type='time' id='MyBirthTime' oninput='update();'></input>
+        </label>
+      </p>
+      <p>
+        <label>Your Friend's<br>
+          Name & Birthday:<br>
+          <input type='text' id='TheirName' placeholder='Their First Name' oninput='update();'></input><br>
+          <input type='date' id='TheirBirth' oninput='update();'></input>
+          <input type='time' id='TheirBirthTime' oninput='update();'></input>
+        </label>
+      </p>
+      <p>
+        <label>First Meeting:<br>
+          <input type='date' id='Meeting' oninput='update();'></input>
+          <input type='time' id='MeetingTime' oninput='update();'></input>
+        </label>
+      </p>
+      <p>
+        <label>Click To Copy Link:<br>
+          <input type='text' id='Link' readonly='readonly' onclick='update(); copy(this);'></input>
+        </label><br>
+        <span style='font-size: 10px; color: #000000a0;'>Check the link before sending it to them.</span>
+      </p>
+    </center>
   </div>
 </body>
 
