@@ -6,7 +6,7 @@ if (urlParams.get('id')) {
   setData();
   checkData();
 } else {
-  location = '/create.html';
+  goToCreate();
 }
 
 function getData() {
@@ -56,10 +56,18 @@ function checkData() {
   alertErrors();
 }
 
+function goToCreate() {
+  if (!urlParams.get('msg')) {
+    location = '/create.html';
+  } else {
+    location = `/create.html?msg=${urlParams.get('msg')}`;
+  }
+}
+
 function alertErrors() {
   if (errors.length) {
     alert(`Your link contains errors.\nIf you created the link, and don't know why it isn't working, feel free to message the developer:\nhttps://pionaiki.com/#contact\n\nErrors:\n${listErrors(errors)}\n`);
-    location = '/create.html';
+    goToCreate();
   }
 }
 
