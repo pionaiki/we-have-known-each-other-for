@@ -4,7 +4,6 @@
 <head>
   <title>Create a Link</title>
   <link rel='shortcut icon' type='image/x-icon' href='favicon.svg'>
-  <script src='/util.js'></script>
   <script src='/crscript.js'></script>
   <link href='/style.css' rel='stylesheet'>
 </head>
@@ -49,7 +48,11 @@
       Copyright (c) 2021 Martha Sokolska
     </center>
   </div>
-  <script>setInterval(function () { document.getElementById('SendTo').textContent = getTheirName(); }, 1); update(); sendMessage('Opened create.html', urlParams.get('msg'));</script>
+  <script>setInterval(function () { document.getElementById('SendTo').textContent = getTheirName(); }, 1); update();</script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "05bc5ce3d0ce44499a54baf71b5b01aa"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>

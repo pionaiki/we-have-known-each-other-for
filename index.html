@@ -4,7 +4,6 @@
 <head>
   <title>We Have Known Each Other For...</title>
   <link rel='shortcut icon' type='image/x-icon' href='favicon.svg'>
-  <script src='/util.js'></script>
   <script src='/script.js'></script>
   <link href='/style.css' rel='stylesheet'>
 </head>
@@ -32,7 +31,11 @@
       Copyright (c) 2021 Martha Sokolska
     </center>
   </div>
-  <script>updateNames(); update(); setInterval(function () { update(); }, 1); sendMessage('Opened index.html', urlParams.get('msg'));</script>
+  <script>updateNames(); update(); setInterval(function () { update(); }, 1);</script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "05bc5ce3d0ce44499a54baf71b5b01aa"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>

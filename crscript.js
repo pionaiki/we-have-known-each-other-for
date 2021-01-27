@@ -1,3 +1,6 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
 function getInput() {
   var input = '';
   input += btoa(document.getElementById('MyName').value) + '--';

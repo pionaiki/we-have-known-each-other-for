@@ -4,7 +4,6 @@
 <head>
   <title>Page Not Found</title>
   <link rel='shortcut icon' type='image/x-icon' href='favicon.svg'>
-  <script src='/util.js'></script>
   <link href='/style.css' rel='stylesheet'>
 </head>
 
@@ -26,7 +25,10 @@
       Copyright (c) 2021 Martha Sokolska
     </center>
   </div>
-  <script>sendMessage('Opened 404.html', urlParams.get('msg'));</script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "05bc5ce3d0ce44499a54baf71b5b01aa"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
