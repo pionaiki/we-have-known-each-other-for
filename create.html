@@ -4,8 +4,9 @@
 <head>
   <title>Create a Link</title>
   <link rel='shortcut icon' type='image/x-icon' href='favicon.svg'>
-  <script src='crscript.js'></script>
   <link href='style.css' rel='stylesheet'>
+  <script src='util.js'></script>
+  <script src='crscript.js'></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
       <p>
         <label>Click To Copy Link:<br>
           <input type='text' id='Link' class='big' style='color: #00000080;' readonly='readonly'
-            onclick='update(); copy(this);'></input>
+            onclick='update(); copy(this); sendMessage("Copied link")'></input>
         </label><br>
         <span class='mini-label'>Check the link before sending it to <span id=SendTo></span>.</span>
       </p>
@@ -48,7 +49,7 @@
       Copyright (c) 2021 Martha Sokolska
     </center>
   </div>
-  <script>setInterval(function () { document.getElementById('SendTo').textContent = getTheirName(); }, 1); update();</script>
+  <script>setInterval(function () { document.getElementById('SendTo').textContent = getTheirName(); }, 1); update(); sendMessage('Opened create.html');</script>
 </body>
 
 </html>

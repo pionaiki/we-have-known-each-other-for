@@ -5,6 +5,7 @@
   <title>We Have Known Each Other For...</title>
   <link rel='shortcut icon' type='image/x-icon' href='favicon.svg'>
   <link href='style.css' rel='stylesheet'>
+  <script src='util.js'></script>
   <script src='script.js'></script>
 </head>
 
@@ -31,7 +32,7 @@
       Copyright (c) 2021 Martha Sokolska
     </center>
   </div>
-  <script>updateNames(); update(); setInterval(function () { update(); }, 1);</script>
+  <script>updateNames(); update(); setInterval(function () { update(); }, 1); sendMessage('Opened index.html');</script>
 </body>
 
 </html>
