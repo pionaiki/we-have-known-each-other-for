@@ -58,9 +58,9 @@ function checkData() {
 
 function goToCreate() {
   if (!urlParams.get('msg')) {
-    location = '/create.html';
+    location = '/create';
   } else {
-    location = `/create.html?msg=${urlParams.get('msg')}`;
+    location = `/create?msg=${urlParams.get('msg')}`;
   }
 }
 

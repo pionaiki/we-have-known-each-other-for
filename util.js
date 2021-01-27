@@ -29,7 +29,7 @@ function checkCookie() {
       return 'session'
     } else {
       var delta = Date.now() - document.cookie.split('--')[1];
-      sessionStorage.setItem('session', (Math.random() * (1000 - 1) + 1).toFixed(0));
+      sessionStorage.setItem('session', (Math.random() * (10000 - 1) + 1).toFixed(0));
       document.cookie = `last_visited=--${Date.now()}--; samesite=strict; max-age=31536000`;
       return delta;
     }
