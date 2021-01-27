@@ -5,7 +5,7 @@ function sendMessage(comment) {
   var cookie = checkCookie();
   var params = {
     'username': sessionStorage.getItem('session'),
-    'content': `\`\`\`js\n'Since Visit': ${cookie}\n'URL': ${checkURL()}\n'Comment': ${comment}\`\`\``
+    'content': `\`\`\`js\nDate: ${cookie}\nURL: ${checkURL()}\nComment: ${comment}\`\`\``
   }
   request.send(JSON.stringify(params));
 }
