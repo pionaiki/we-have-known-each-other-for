@@ -2,6 +2,8 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 if (!urlParams.get('example')) {
   window.history.replaceState({}, document.title, `/id/${urlParams.get('id')}`);
+} else {
+  window.history.replaceState({}, document.title, '/example');
 }
 var data, idString, errors = [];
 
